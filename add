@@ -1,0 +1,11 @@
+ThePinkBatch/
+│
+├── index.html
+├── style.css
+├── script.js
+├── images/
+│   ├── logo.png
+│   ├── biscoff.jpg
+│   ├── nutella.jpg
+│   ├── bueno.jpg
+│   └── chocchip.jpg
