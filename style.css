@@ -773,3 +773,149 @@ display:none;
 }
 
 }
+/* Scroll animation */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Sparkles */
+
+.sparkle{
+
+position:fixed;
+
+pointer-events:none;
+
+color:#efbfd0;
+
+animation:sparkleFloat linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes sparkleFloat{
+
+0%{
+
+transform:translateY(0) scale(0);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* Hearts */
+
+.heart{
+
+position:fixed;
+
+pointer-events:none;
+
+color:#f2c6d5;
+
+font-size:20px;
+
+animation:heartFloat linear forwards;
+
+z-index:998;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.9;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* Ripple */
+
+button,
+.hero-buttons a,
+.order-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.5);
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+}
