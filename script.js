@@ -169,3 +169,71 @@ card.style.transform="rotateY(0) rotateX(0)";
 });
 
 });
+// -------------------------
+// BUILD YOUR BOX
+// -------------------------
+
+let totalCookies = 0;
+const maxCookies = 6;
+
+const totalDisplay = document.getElementById("totalCookies");
+const priceDisplay = document.getElementById("price");
+const progressBar = document.getElementById("progress");
+
+function updateTotals() {
+
+    totalDisplay.textContent = totalCookies;
+
+    priceDisplay.textContent = totalCookies * 5;
+
+    progressBar.style.width = (totalCookies / maxCookies) * 100 + "%";
+
+}
+
+document.querySelectorAll(".plus").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const count = button.parentElement.querySelector(".count");
+
+        let current = Number(count.textContent);
+
+        if (totalCookies < maxCookies) {
+
+            current++;
+            totalCookies++;
+
+            count.textContent = current;
+
+            updateTotals();
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".minus").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const count = button.parentElement.querySelector(".count");
+
+        let current = Number(count.textContent);
+
+        if (current > 0) {
+
+            current--;
+            totalCookies--;
+
+            count.textContent = current;
+
+            updateTotals();
+
+        }
+
+    });
+
+});
+
+updateTotals();
