@@ -219,61 +219,73 @@ From our kitchen to yours, every cookie is soft, stuffed and made with care.
 
 </section>
 
-<label>Choose your cookies:</label>
+<section class="order" id="order">
 
-<div class="cookies">
-    <label><input type="checkbox" name="cookie"> Bueno</label>
-    <label><input type="checkbox" name="cookie"> Nutella</label>
-    <label><input type="checkbox" name="cookie"> Biscoff</label>
-    <label><input type="checkbox" name="cookie"> Chocolate Chip</label>
+<section class="order" id="order">
+
+<h2>🍪 Build Your Box</h2>
+
+<p class="order-subtitle">
+Choose exactly <strong>6 cookies</strong> to create your perfect box.
+</p>
+
+<div class="build-box">
+
+<div class="cookie-choice">
+<span>Nutella</span>
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
 </div>
 
+<div class="cookie-choice">
+<span>Bueno</span>
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
+
+<div class="cookie-choice">
+<span>Biscoff</span>
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
+
+<div class="cookie-choice">
+<span>Chocolate Chip</span>
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
+
+</div>
+
+
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+
+<p class="cookie-total">
+<span id="totalCookies">0</span> / 6 COOKIES
+</p>
+
+
+<hr>
+
+<div class="total-price">
+<h3>Total</h3>
+<h3>$<span id="price">0</span></h3>
+</div>
+
+
 <label for="message">Extra notes:</label>
-<textarea id="message" name="message" placeholder="Any requests?"></textarea>
+<textarea id="message" placeholder="Any requests?"></textarea>
 
-<button type="submit">Submit Order 🍪</button>
 
-</form>
-
-</section>
-
-<input type="text" placeholder="Full Name">
-
-<input type="tel" placeholder="Phone Number">
-
-<select>
-
-<option>Biscoff</option>
-
-<option>Nutella</option>
-
-<option>Kinder Bueno</option>
-
-<option>Chocolate Chip</option>
-
-</select>
-
-<select>
-
-<option>Single</option>
-
-<option>Box of 4</option>
-
-<option>Box of 6</option>
-
-</select>
-
-<input type="date">
-
-<textarea placeholder="Special Requests"></textarea>
-
-<button>
-
-Submit Order
-
+<button type="submit">
+Submit Order 🍪
 </button>
-
-</form>
 
 </section>
 
