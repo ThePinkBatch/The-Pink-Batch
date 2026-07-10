@@ -919,3 +919,129 @@ opacity:0;
 
 }
 }
+/* BUILD YOUR BOX */
+
+.order{
+    padding:100px 40px;
+    background:#fff8fb;
+}
+
+.order h2{
+    text-align:center;
+    font-size:70px;
+    font-family:"Cormorant Garamond",serif;
+    color:#7a4053;
+    margin-bottom:15px;
+}
+
+.order-subtitle{
+    text-align:center;
+    color:#9b6c7a;
+    font-size:20px;
+    margin-bottom:50px;
+}
+
+.build-box{
+    max-width:900px;
+    margin:auto;
+}
+
+.cookie-choice{
+    background:#f9dfea;
+    border-radius:28px;
+    padding:28px 35px;
+    margin-bottom:22px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.cookie-choice span:first-child{
+    font-size:30px;
+    color:#7a4053;
+    font-family:"Cormorant Garamond",serif;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.quantity button{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.minus{
+    background:white;
+    color:#ec69a9;
+    border:2px solid #ec69a9;
+}
+
+.plus{
+    background:#ec69a9;
+    color:white;
+}
+
+.count{
+    font-size:30px;
+    min-width:25px;
+    text-align:center;
+}
+
+.progress-bar{
+    max-width:900px;
+    margin:45px auto 15px;
+    height:12px;
+    background:#f2c6da;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:#ec69a9;
+    transition:.3s;
+}
+
+.cookie-total{
+    text-align:center;
+    font-size:24px;
+    color:#c33f79;
+    margin-bottom:40px;
+}
+
+.total-price{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:40px;
+    color:#7a4053;
+
+    border-top:2px solid #f0d2df;
+    padding-top:35px;
+    margin-bottom:35px;
+}
+
+.order textarea{
+    width:900px;
+    max-width:100%;
+    display:block;
+    margin:20px auto;
+}
+
+.submit-order{
+    display:block;
+    width:320px;
+    margin:30px auto;
+}
