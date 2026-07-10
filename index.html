@@ -1,7 +1,7 @@
-@@ -0,0 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,12 +13,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="loader">
-    <div class="loader-text">The Pink Batch</div>
+<div class="loader-text">The Pink Batch</div>
 </div>
 
 <header>
@@ -26,23 +27,16 @@
 <nav>
 
 <div class="logo">
-
 <img src="logo.png" alt="The Pink Batch Logo">
-
 </div>
 
 <ul>
-
 <li><a href="#home">Home</a></li>
-
 <li><a href="#cookies">Cookies</a></li>
-
 <li><a href="#pricing">Pricing</a></li>
-
 <li><a href="#about">About</a></li>
-
+<li><a href="#order">Order</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 <a class="order-btn" href="#order">Order Now</a>
@@ -60,37 +54,25 @@ Freshly Baked Daily
 </span>
 
 <h1>
-
-Freshly Baked.
-
-<span>Soft.</span>
-
+Freshly Baked.<br>
+<span>Soft.</span><br>
 Stuffed.
-
 </h1>
 
 <p>
-
 Premium homemade cookies baked fresh in Sydney.
-
 Made with love using quality ingredients.
-
 </p>
 
 <div class="hero-buttons">
-
 <a href="#order">Order Now</a>
-
 <a href="#cookies">View Cookies</a>
-
 </div>
 
 </div>
 
 <div class="hero-image">
-
-<img src="logo.png">
-
+<img src="logo.png" alt="Logo">
 </div>
 
 </section>
@@ -98,27 +80,18 @@ Made with love using quality ingredients.
 <section class="features">
 
 <div class="feature">
-
 <h3>Home Baked</h3>
-
 <p>Fresh every week.</p>
-
 </div>
 
 <div class="feature">
-
 <h3>Premium Ingredients</h3>
-
 <p>Always made with quality chocolate.</p>
-
 </div>
 
 <div class="feature">
-
 <h3>Sydney Pickup</h3>
-
 <p>Pickup after your order is confirmed.</p>
-
 </div>
 
 </section>
@@ -128,43 +101,29 @@ Made with love using quality ingredients.
 <h2>Our Cookies</h2>
 
 <p class="subtitle">
-
 Current Rotation • 4 Cookies
-
 </p>
 
 <div class="cookie-grid">
 
 <div class="cookie-card">
-
 <h3>Biscoff</h3>
-
 <p>Stuffed with creamy Biscoff spread.</p>
-
 </div>
 
 <div class="cookie-card">
-
 <h3>Nutella</h3>
-
 <p>Filled with warm Nutella.</p>
-
 </div>
 
 <div class="cookie-card">
-
 <h3>Kinder Bueno</h3>
-
 <p>Loaded with Bueno chocolate.</p>
-
 </div>
 
 <div class="cookie-card">
-
 <h3>Chocolate Chip</h3>
-
 <p>Soft, buttery and packed with chocolate.</p>
-
 </div>
 
 </div>
@@ -178,27 +137,18 @@ Current Rotation • 4 Cookies
 <div class="price-grid">
 
 <div class="price-card">
-
 <h3>Single</h3>
-
 <h1>$5</h1>
-
 </div>
 
 <div class="price-card featured">
-
 <h3>Box of 4</h3>
-
 <h1>$18</h1>
-
 </div>
 
 <div class="price-card">
-
 <h3>Box of 6</h3>
-
 <h1>$28</h1>
-
 </div>
 
 </div>
@@ -210,70 +160,89 @@ Current Rotation • 4 Cookies
 <h2>Made With Love</h2>
 
 <p>
-
 Every batch is handmade in Sydney and baked fresh to order.
-
 From our kitchen to yours, every cookie is soft, stuffed and made with care.
-
 </p>
 
-</section>
+</section> <section class="order" id="order">
 
-<label>Choose your cookies:</label>
+<h2>🍪 Build Your Box</h2>
 
-<div class="cookies">
-    <label><input type="checkbox" name="cookie"> Bueno</label>
-    <label><input type="checkbox" name="cookie"> Nutella</label>
-    <label><input type="checkbox" name="cookie"> Biscoff</label>
-    <label><input type="checkbox" name="cookie"> Chocolate Chip</label>
+<p class="order-subtitle">
+Choose exactly <strong>6 cookies</strong> to create your perfect box.
+</p>
+
+<div class="build-box">
+
+<div class="cookie-choice">
+<span>Nutella</span>
+
+<div class="quantity">
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
 </div>
 
-<label for="message">Extra notes:</label>
-<textarea id="message" name="message" placeholder="Any requests?"></textarea>
+</div>
 
-<button type="submit">Submit Order 🍪</button>
+<div class="cookie-choice">
+<span>Bueno</span>
 
-</form>
+<div class="quantity">
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
 
-</section>
+</div>
 
-<input type="text" placeholder="Full Name">
+<div class="cookie-choice">
+<span>Biscoff</span>
 
-<input type="tel" placeholder="Phone Number">
+<div class="quantity">
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
 
-<select>
+</div>
 
-<option>Biscoff</option>
+<div class="cookie-choice">
+<span>Chocolate Chip</span>
 
-<option>Nutella</option>
+<div class="quantity">
+<button class="minus">−</button>
+<span class="count">0</span>
+<button class="plus">+</button>
+</div>
 
-<option>Kinder Bueno</option>
+</div>
 
-<option>Chocolate Chip</option>
+</div>
 
-</select>
+<div class="progress-bar">
+<div class="progress" id="progress"></div>
+</div>
 
-<select>
+<p class="cookie-total">
+<span id="totalCookies">0</span> / 6 Cookies Selected
+</p>
 
-<option>Single</option>
+<div class="total-price">
+<h3>Total</h3>
+<h3>$<span id="price">0</span></h3>
+</div>
 
-<option>Box of 4</option>
+<label for="message">Extra Notes</label>
 
-<option>Box of 6</option>
+<textarea
+id="message"
+placeholder="Any allergies, requests or pickup notes?"
+></textarea>
 
-</select>
-
-<input type="date">
-
-<textarea placeholder="Special Requests"></textarea>
-
-<button>
-
-Submit Order
-
+<button class="submit-order">
+Submit Order 🍪
 </button>
-
-</form>
 
 </section>
 
@@ -282,15 +251,11 @@ Submit Order
 <h2>Find Us</h2>
 
 <p>
-
 Sydney • Pickup Only
-
 </p>
 
 <a href="https://instagram.com/ThePinkBatch.official">
-
 @ThePinkBatch.official
-
 </a>
 
 </section>
@@ -298,9 +263,7 @@ Sydney • Pickup Only
 <footer>
 
 <p>
-
 © 2026 The Pink Batch
-
 </p>
 
 </footer>
