@@ -184,7 +184,11 @@ function updateTotals() {
 
     totalDisplay.textContent = totalCookies;
 
+  if (totalCookies === 6) {
+    priceDisplay.textContent = 35;
+} else {
     priceDisplay.textContent = totalCookies * 5;
+}
 
     progressBar.style.width = (totalCookies / maxCookies) * 100 + "%";
 
