@@ -273,9 +273,12 @@ headers:{
 "Content-Type":"application/json"
 },
 body:JSON.stringify({
-cookies:cookies,
+name: document.getElementById("customerName").value,
+phone: document.getElementById("customerPhone").value,
+pickup: document.getElementById("pickupDate").value,
+cookies: JSON.stringify(cookies),
 total: totalCookies,
-price: priceDisplay.textContent
+notes: document.getElementById("message").value
 })
 
 });
