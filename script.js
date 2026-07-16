@@ -241,9 +241,8 @@ document.querySelectorAll(".minus").forEach(button => {
 });
 
 updateTotals();
-const SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
-
-const orderButton = document.getElementById("orderButton");
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZIddzN2HS3567mn4EHkkNBeijEQA4_H1oTDG5tJLaQzgahHhEiQIqSs-unwEfMnfP_Q/exec"
+const orderButton = document.querySelector(".submit-order");
 
 if(orderButton){
 
@@ -275,7 +274,7 @@ price: priceDisplay.textContent
 
 });
 
-alert("Order sent! 🍪");
+alert("Your cookie order has been sent! 🍪💕");
 
 });
 
