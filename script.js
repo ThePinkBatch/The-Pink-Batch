@@ -275,12 +275,12 @@ headers:{
 body:JSON.stringify({
 name: document.getElementById("customerName").value,
 phone: document.getElementById("customerPhone").value,
+email: "",
 pickup: document.getElementById("pickupDate").value,
 cookies: JSON.stringify(cookies),
 total: totalCookies,
 notes: document.getElementById("message").value
 })
-
 });
 
 alert("Your cookie order has been sent! 🍪💕");
