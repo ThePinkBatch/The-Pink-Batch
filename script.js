@@ -251,15 +251,14 @@ console.log("ORDER BUTTON WORKING");
 alert("Button clicked!");
 let cookies = {};
 
-document.querySelectorAll(".cookie-card").forEach(card=>{
+document.querySelectorAll(".cookie-choice").forEach(card=>{
 
-let name = card.querySelector("h3").textContent;
+let name = card.querySelector("span").textContent;
 let amount = card.querySelector(".count").textContent;
 
 cookies[name] = amount;
 
 });
-
 
 console.log("Sending order:", {
 cookies:cookies,
