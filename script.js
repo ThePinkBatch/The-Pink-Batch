@@ -241,4 +241,42 @@ document.querySelectorAll(".minus").forEach(button => {
 });
 
 updateTotals();
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZIddzN2HS3567mn4EHkkNBeijEQA4_H1oTDG5tJLaQzgahHhEiQIqSs-unwEfMnf
+const SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+const orderButton = document.getElementById("orderButton");
+
+if(orderButton){
+
+orderButton.addEventListener("click",()=>{
+
+let cookies = {};
+
+document.querySelectorAll(".cookie-card").forEach(card=>{
+
+let name = card.querySelector("h3").textContent;
+let amount = card.querySelector(".count").textContent;
+
+cookies[name] = amount;
+
+});
+
+
+fetch(SCRIPT_URL,{
+method:"POST",
+mode:"no-cors",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+cookies:cookies,
+total: totalCookies,
+price: priceDisplay.textContent
+})
+
+});
+
+alert("Order sent! 🍪");
+
+});
+
+}
