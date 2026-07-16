@@ -260,6 +260,12 @@ cookies[name] = amount;
 });
 
 
+console.log("Sending order:", {
+cookies:cookies,
+total: totalCookies,
+price: priceDisplay.textContent
+});
+
 fetch(SCRIPT_URL,{
 method:"POST",
 mode:"no-cors",
