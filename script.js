@@ -248,6 +248,7 @@ if(orderButton){
 
 orderButton.addEventListener("click",()=>{
 console.log("ORDER BUTTON WORKING");
+alert("Button clicked!");
 let cookies = {};
 
 document.querySelectorAll(".cookie-card").forEach(card=>{
