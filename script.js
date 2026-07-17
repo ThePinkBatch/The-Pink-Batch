@@ -241,7 +241,7 @@ document.querySelectorAll(".minus").forEach(button => {
 });
 
 updateTotals();
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZIddzN2HS3567mn4EHkkNBeijEQA4_H1oTDG5tJLaQzgahHhEiQIqSs-unwEfMnfP_Q/exec"
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRBckPIQgnBoO3msOrBjmD_awjHrvahDDbAMjEIUhBI3HRy6fhiLf7N0l6JY6ommcw2g/exec";
 const orderButton = document.querySelector(".submit-order");
 console.log(orderButton);
 if(orderButton){
