@@ -289,3 +289,5 @@ fetch(SCRIPT_URL,{
     console.error(err);
     alert("There was an error sending your order.");
 });
+});
+}
