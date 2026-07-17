@@ -242,16 +242,18 @@ document.querySelectorAll(".minus").forEach(button => {
 
 updateTotals();
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRBckPIQgnBoO3msOrBjmD_awjHrvahDDbAMjEIUhBI3HRy6fhiLf7N0l6JY6ommcw2g/exec";
-const orderButton = document.querySelector(".submit-order");
-console.log(orderButton);
-if(orderButton){
 
-orderButton.addEventListener("click",()=>{
-console.log("ORDER BUTTON WORKING");
+const orderButton = document.querySelector(".submit-order");
+
+if (orderButton) {
+
+orderButton.addEventListener("click", () => {
+
 alert("Button clicked!");
+
 let cookies = {};
 
-document.querySelectorAll(".cookie-choice").forEach(card=>{
+document.querySelectorAll(".cookie-choice").forEach(card => {
 
 let name = card.querySelector("span").textContent;
 let amount = card.querySelector(".count").textContent;
@@ -260,34 +262,24 @@ cookies[name] = amount;
 
 });
 
-console.log("Sending order:", {
-cookies:cookies,
+
+fetch(SCRIPT_URL, {
+method: "POST",
+mode: "no-cors",
+headers: {
+"Content-Type": "text/plain"
+},
+body: JSON.stringify({
+name: document.getElementById("customerName").value,
+phone: document.getElementById("customerPhone").value,
+pickup: document.getElementById("pickupDate").value,
+cookies: JSON.stringify(cookies),
 total: totalCookies,
-price: priceDisplay.textContent
+notes: document.getElementById("message").value
+})
+
 });
 
-fetch(SCRIPT_URL,{
-    method:"POST",
-    mode:"no-cors",
-    headers:{
-        "Content-Type":"text/plain"
-    },
-    body: JSON.stringify({
-        name: document.getElementById("customerName").value,
-        phone: document.getElementById("customerPhone").value,
-        email: "",
-        pickup: document.getElementById("pickupDate").value,
-        cookies: JSON.stringify(cookies),
-        total: totalCookies,
-        notes: document.getElementById("message").value
-    })
-})
-.then(()=>{
-    alert("Your cookie order has been sent! 🍪💕");
-})
-.catch(err=>{
-    console.error(err);
-    alert("There was an error sending your order.");
 });
-});
+
 }
