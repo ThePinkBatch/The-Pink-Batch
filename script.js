@@ -267,24 +267,25 @@ price: priceDisplay.textContent
 });
 
 fetch(SCRIPT_URL,{
-method:"POST",
-mode:"no-cors",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-name: document.getElementById("customerName").value,
-phone: document.getElementById("customerPhone").value,
-email: "",
-pickup: document.getElementById("pickupDate").value,
-cookies: JSON.stringify(cookies),
-total: totalCookies,
-notes: document.getElementById("message").value
+    method:"POST",
+    mode:"no-cors",
+    headers:{
+        "Content-Type":"text/plain"
+    },
+    body: JSON.stringify({
+        name: document.getElementById("customerName").value,
+        phone: document.getElementById("customerPhone").value,
+        email: "",
+        pickup: document.getElementById("pickupDate").value,
+        cookies: JSON.stringify(cookies),
+        total: totalCookies,
+        notes: document.getElementById("message").value
+    })
 })
+.then(()=>{
+    alert("Your cookie order has been sent! 🍪💕");
+})
+.catch(err=>{
+    console.error(err);
+    alert("There was an error sending your order.");
 });
-
-alert("Your cookie order has been sent! 🍪💕");
-
-});
-
-}
